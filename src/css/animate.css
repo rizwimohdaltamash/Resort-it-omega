@@ -1,0 +1,61 @@
+/* @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .fade-in-text {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .fade-in-text:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  .fade-in-text:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .fade-in-text:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+  .fade-in-text:nth-child(4) {
+    animation-delay: 2s;
+  }
+  .fade-in-text:nth-child(5) {
+    animation-delay: 2.5s;
+  }
+  .fade-in-text:nth-child(6) {
+    animation-delay: 3s;
+  }
+   */
+
+   @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-text {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slide-in 1s ease-out forwards;
+  }
+  
+  .animate-slide-in-text {
+    animation: slide-in-text 1.5s ease-in-out forwards;
+    animation-delay: 1s; /* Delay to ensure it starts after the Lottie icon */
+  }
+  
