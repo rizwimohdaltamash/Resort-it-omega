@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row">
           {/* Huge Text */}
           <div className="flex flex-col mt-10 lg:ml-8 lg:w-[65%]">
-            <h1 className="px-2 lg:px-0 text-md lg:text-4xl font-bold text-black flex space-x-1 lg:space-x-2">
+            <h1 className="px-4 lg:px-0 text-md lg:text-4xl font-bold text-black flex space-x-1 lg:space-x-2">
               <span className="fade-in-text">WANT</span>
               <span className="fade-in-text">TO</span>
               <span className="fade-in-text">SELL</span>
