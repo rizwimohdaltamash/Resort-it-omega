@@ -19,6 +19,9 @@ const Login = () => {
     password: "",
   });
 
+  // Loading State
+  const [loading, setLoading] = useState(false);
+
   /**========================================================================
    *                          User Login Function
    *========================================================================**/
@@ -28,6 +31,8 @@ const Login = () => {
     if (userLogin.email === "" || userLogin.password === "") {
       toast.error("All Fields are required");
     }
+
+    setLoading(true); // Start loading animation
 
     try {
       const users = await signInWithEmailAndPassword(
@@ -52,21 +57,18 @@ const Login = () => {
           });
           toast.success("Login Successfully");
           navigate("/");
-          // if (user.role === "scrapdealer" || user.role === "ngo"){
-          //   navigate("/");
-          // } else {
-          //   navigate("/owner-dashboard");
-          // }
-
+          setLoading(false); // Stop loading animation
+          window.location.reload(); // Reload page for faster transitions
         });
         return () => data;
       } catch (error) {
         console.log(error);
+        setLoading(false); // Stop loading animation
       }
     } catch (error) {
       console.log(error);
-
       toast.error("Login Failed");
+      setLoading(false); // Stop loading animation
     }
   };
   return (
@@ -74,7 +76,7 @@ const Login = () => {
     style={{ backgroundImage: `url(${Bg})` }}
     >     
       {/* Login Form  */}
-      <div className="shadow-2xl bg-opacity-20 backdrop-filter backdrop-blur-lg px-5 lg:px-8 py-10 rounded-lg  w-[90%] md:w-[50%] lg:w-[30%]  ">
+      <div className="shadow-2xl bg-opacity-20 backdrop-filter backdrop-blur-lg px-5 lg:px-8 py-10 rounded-lg w-[90%] md:w-[50%] lg:w-[30%]  ">
         {/* Logo  */}
         <div className="flex flex-col items-center mb-6">
           {/* <AiFillDingtalkCircle size={64} className="text-black" /> */}
@@ -122,9 +124,14 @@ const Login = () => {
           <button
             type="button"
             onClick={userLoginFunction}
-            className="bg-[#51cf7bf8] border-2 border-[#51cf7bf8] hover:bg-[#29a252f8] w-full text-white py-3 font-bold rounded-md transition duration-200 "
+            className="bg-[#51cf7bf8] border-2 border-[#51cf7bf8] hover:bg-[#29a252f8] w-full text-white py-3 font-bold rounded-md transition duration-200 flex items-center justify-center"
+            disabled={loading} // Disable button during loading
           >
-            Login
+           {loading ? (
+              <div className="w-6 h-6 border-4 border-t-4 border-gray-200 rounded-full animate-spin" style={{ borderTopColor: "green" }}></div>
+            ) : (
+              "Login"
+            )}
           </button>
         </div>
 
