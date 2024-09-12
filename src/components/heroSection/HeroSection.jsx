@@ -19,16 +19,17 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row">
           {/* Huge Text */}
           <div className="flex flex-col mt-10 lg:ml-8 lg:w-[65%]">
-            <h1 className="px-1 lg:px-0 text-md lg:text-4xl font-bold text-black flex space-x-1 lg:space-x-2">
+            <h1 className="px-4 lg:px-0 text-2xl lg:text-4xl font-bold text-black  space-x-1 lg:space-x-2 flex flex-wrap whitespace-normal">
               <span className="fade-in-text">WANT</span>
               <span className="fade-in-text">TO</span>
               <span className="fade-in-text">SELL</span>
               <span className="fade-in-text">YOUR</span>
-              <span className="fade-in-text text-[#01c141f8] ">RECYCLABLE</span>
+             <span className="fade-in-text text-[#01c141f8] ml-2 lg:ml-4">RECYCLABLE </span>
               <span className="fade-in-text text-[#01c141f8]">PRODUCTS?</span>
+              
             </h1>
 
-            <p className="mt-7 w-full lg:w-[55%] px-4 lg:px-0 text-sm lg:text-2xl text-gray-700">
+            <p className="mt-4 lg:mt-7 w-full lg:w-[55%] px-4 lg:px-0 text-md lg:text-2xl text-gray-700">
               This is a platform being made with the intention of
               reusing and recycling the products, reducing waste
                from the environment and making it profitable for
@@ -36,7 +37,7 @@ const HeroSection = () => {
             </p>
 
             {/* ADD Product Button */}
-            <div className="mt-8">
+            <div className="mt-6 lg:mt-16">
               <button
                 onClick={() => navigate("/owner-dashboard")}
                 className="ml-4 lg:ml-0 px-6 lg:px-8 py-2 lg:py-3 lg:text-lg lg:font-bold bg-[#01c141f8] text-white rounded-lg transition duration-500 transform hover:bg-[#27994df8] hover:scale-105 hover:shadow-lg hover:shadow-[#0ae854f8]/50 shadow-md shadow-[#27994df8]/50 ease-in-out"
@@ -47,7 +48,7 @@ const HeroSection = () => {
           </div>
  
           {/* Hero Icon */}
-          <div className="absolute left-[60%] lg:left-[60%] top-[45%] lg:top-[4%]  w-[35%] lg:w-[35%] lg:ml-10 lg:mt-8 text-[#00a99d]">
+          <div className="absolute left-[60%] lg:left-[60%] top-[46%] lg:top-[4%]  w-[35%] lg:w-[35%] lg:ml-10 lg:mt-8 text-[#00a99d]">
             <Lottie className="w-full" animationData={Hero} />
           </div>
         </div>
@@ -56,74 +57,80 @@ const HeroSection = () => {
       {/* For scrap dealers */}
       {user?.role === "scrapdealer" && (
         <div className="flex flex-col lg:flex-row">
-          {/* Huge Text */}
-          <div className="flex flex-col mt-10 lg:ml-8 lg:w-[65%]">
-            <h1 className="px-4 lg:px-0 text-md lg:text-4xl font-bold text-black flex space-x-1 lg:space-x-2">
-              <span className="fade-in-text">WANT</span>
-              <span className="fade-in-text">TO</span>
-              <span className="fade-in-text">GET</span>
-              <span className="fade-in-text text-[#01c141f8] ">RECYCLABLE</span>
-              <span className="fade-in-text text-[#01c141f8]">PRODUCTS?</span>
-            </h1>
-            <p className="mt-7 w-full lg:w-[55%] px-4 lg:px-0 text-sm lg:text-2xl text-gray-700">
-              This is a platform being made with the intention of reusing 
-              and recycling the products, reducing waste from the environment
-               and making it profitable for the users by selling the
-              products  at a high bid.
-            </p>
+        {/* Huge Text */}
+        <div className="flex flex-col mt-10 lg:ml-8 lg:w-[65%]">
+          <h1 className="px-4 lg:px-0 text-2xl lg:text-4xl font-bold text-black  space-x-1 lg:space-x-2 flex flex-wrap whitespace-normal">
+            <span className="fade-in-text">WANT</span>
+            <span className="fade-in-text">TO</span>
+            <span className="fade-in-text">GET</span>            
+           <span className="fade-in-text text-[#01c141f8] ml-2 lg:ml-4">RECYCLABLE </span>
+            <span className="fade-in-text text-[#01c141f8]">PRODUCTS?</span>
+            
+          </h1>
 
-            <div className="mt-8">
-              <button
-                onClick={() => navigate("/scrap")}
-                className="ml-4 lg:ml-0 px-6 lg:px-8 py-2 lg:py-3 lg:text-lg lg:font-bold bg-[#01c141f8] text-white rounded-lg transition duration-500 transform hover:bg-[#27994df8] hover:scale-105 hover:shadow-lg hover:shadow-[#0ae854f8]/50 shadow-md shadow-[#27994df8]/50 ease-in-out"
-              >
-                Go to Scrap Section
-              </button>
-            </div>
-          </div>
+          <p className="mt-4 lg:mt-7 w-full lg:w-[55%] px-4 lg:px-0 text-md lg:text-2xl text-gray-700">
+            This is a platform being made with the intention of
+            reusing and recycling the products, reducing waste
+             from the environment and making it profitable for
+             the users by selling the products at the highest rate.
+          </p>
 
-          {/* Hero Icon */}
-          <div className="absolute left-[60%] lg:left-[60%] top-[45%] lg:top-[4%]  w-[35%] lg:w-[35%] lg:ml-10 lg:mt-8 text-[#00a99d]">
-            <Lottie className="w-full" animationData={Hero} />
+          {/* ADD Product Button */}
+          <div className="mt-4 lg:mt-12">
+            <button
+              onClick={() => navigate("/scrap")}
+              className="ml-4 lg:ml-0 px-6 lg:px-8 py-2 lg:py-3 lg:text-lg lg:font-bold bg-[#01c141f8] text-white rounded-lg transition duration-500 transform hover:bg-[#27994df8] hover:scale-105 hover:shadow-lg hover:shadow-[#0ae854f8]/50 shadow-md shadow-[#27994df8]/50 ease-in-out"
+            >
+             Go to Scrap Section
+            </button>
           </div>
         </div>
+
+        {/* Hero Icon */}
+        <div className="absolute left-[60%] lg:left-[60%] top-[48%] lg:top-[4%]  w-[35%] lg:w-[35%] lg:ml-10 lg:mt-8 text-[#00a99d]">
+          <Lottie className="w-full" animationData={Hero} />
+        </div>
+      </div>
       )}
 
       {user?.role === "ngo" && (
         <div className="flex flex-col lg:flex-row">
-          {/* Huge Text */}
-          <div className="flex flex-col mt-10 lg:ml-8 lg:w-[65%]">
-            <h1 className="px-4 lg:px-0 text-sm lg:text-4xl font-bold text-black flex space-x-1 lg:space-x-2">
-              <span className="fade-in-text">WANT</span>
-              <span className="fade-in-text">TO</span>
-              <span className="fade-in-text">KNOW</span>
-              <span className="fade-in-text">MORE</span>
-              <span className="fade-in-text">ABOUT</span>
-              <span className="fade-in-text text-[#01c141f8] ">OUR</span>
-              <span className="fade-in-text text-[#01c141f8]">COMMUNITY?</span>
-            </h1>
-            <p className="mt-7 w-full lg:w-[55%] px-4 lg:px-0 text-sm lg:text-2xl text-gray-700">
-              This platform empowers you to take action and contribute  to
-              a cleaner, greener environment. You can help make a  real
-              difference in your community by uploading pictures  of areas
-              that need cleaning and restoration.
-            </p>
+        {/* Huge Text */}
+        <div className="flex flex-col mt-10 lg:ml-8 lg:w-[65%]">
+          <h1 className="px-4 lg:px-0 text-2xl lg:text-4xl font-bold text-black  space-x-1 lg:space-x-2 flex flex-wrap whitespace-normal">
+            <span className="fade-in-text">WANT</span>
+            <span className="fade-in-text">TO</span>
+            <span className="fade-in-text">KNOW</span>
+            <span className="fade-in-text">MORE</span>
+            <span className="fade-in-text">ABOUT</span>
+           <span className="fade-in-text text-[#01c141f8]">OUR</span>
+            <span className="fade-in-text text-[#01c141f8]">COMMUNITY?</span>
+            
+          </h1>
 
-            <div className="mt-8">
-              <button
-                onClick={() => navigate("/message")}
-                className="px-4 ml-4 lg:ml-0 lg:px-8 py-2 lg:py-3 lg:text-lg lg:font-bold bg-[#01c141f8] text-white rounded-lg transition duration-500 transform hover:bg-[#27994df8] hover:scale-105 hover:shadow-lg hover:shadow-[#0ae854f8]/50 shadow-md shadow-[#27994df8]/50 ease-in-out"
-              >
-                Go to Community Page
-              </button>
-            </div>
-          </div>
+          <p className="mt-4 lg:mt-7 w-full lg:w-[55%] px-4 lg:px-0 text-md lg:text-2xl text-gray-700">
+            This is a platform being made with the intention of
+            reusing and recycling the products, reducing waste
+             from the environment and making it profitable for
+             the users.
+          </p>
 
-          {/* Hero Icon */}
-          <div className="absolute left-[60%] lg:left-[60%] top-[45%] lg:top-[4%]  w-[35%] lg:w-[35%] lg:ml-10 lg:mt-8 text-[#00a99d]">
-            <Lottie className="w-full" animationData={Hero} />
+          {/* ADD Product Button */}
+          <div className="mt-4 lg:mt-12">
+            <button
+              onClick={() => navigate("/message")}
+              className="ml-4 lg:ml-0 px-6 lg:px-8 py-2 lg:py-3 lg:text-lg lg:font-bold bg-[#01c141f8] text-white rounded-lg transition duration-500 transform hover:bg-[#27994df8] hover:scale-105 hover:shadow-lg hover:shadow-[#0ae854f8]/50 shadow-md shadow-[#27994df8]/50 ease-in-out"
+            >
+              Community Page 
+            </button>
           </div>
         </div>
+
+        {/* Hero Icon */}
+        <div className="absolute left-[60%] lg:left-[60%] top-[45%] lg:top-[4%]  w-[35%] lg:w-[35%] lg:ml-10 lg:mt-8 text-[#00a99d]">
+          <Lottie className="w-full" animationData={Hero} />
+        </div>
+      </div>
       )}
 
      
