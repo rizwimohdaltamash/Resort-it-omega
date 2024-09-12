@@ -74,7 +74,7 @@ const Login = () => {
     style={{ backgroundImage: `url(${Bg})` }}
     >     
       {/* Login Form  */}
-      <div className="shadow-2xl bg-opacity-20 backdrop-filter backdrop-blur-lg px-5 lg:px-8 py-10 rounded-lg h-full lg:h-[62vh] w-[90%] md:w-[50%] lg:w-[30%]  ">
+      <div className="shadow-2xl bg-opacity-20 backdrop-filter backdrop-blur-lg px-5 lg:px-8 py-10 rounded-lg  w-[90%] md:w-[50%] lg:w-[30%]  ">
         {/* Logo  */}
         <div className="flex flex-col items-center mb-6">
           {/* <AiFillDingtalkCircle size={64} className="text-black" /> */}
