@@ -18,6 +18,9 @@ const Signup = () => {
     companyName: ""
   });
 
+  const [loading, setLoading] = useState(false); // Loading state
+
+
   const handleRoleChange = (e) => {
     const role = e.target.value;
     setUserSignup({
@@ -59,6 +62,7 @@ const Signup = () => {
     };
   
     try {
+      setLoading(true); // Start loading
       let location = null;
   
       // Only capture geolocation if the user is an NGO
@@ -103,9 +107,12 @@ const Signup = () => {
   
       toast.success("Signup Successfully");
       navigate("/");
+      window.location.reload(); // Reload the page for faster transitions
     } catch (error) {
       console.log(error);
       toast.error("Signup Failed");
+    }finally {
+      setLoading(false); // Stop loading after signup completes or fails
     }
   };
   
@@ -156,7 +163,7 @@ const Signup = () => {
         <div className="mb-5">
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Password (alphabets & numbers) "
             value={userSignup.password}
             onChange={(e) => {
               setUserSignup({
@@ -224,9 +231,16 @@ const Signup = () => {
           <button
             type="button"
             onClick={userSignupFunction}
-            className="bg-[#51cf7bf8] border-2 border-[#51cf7bf8] hover:bg-[#2ba654f8] w-full text-white py-3 font-bold rounded-md transition duration-200 "
+            className="bg-[#51cf7bf8] border-2 border-[#51cf7bf8] hover:bg-[#2ba654f8] w-full text-white py-3 font-bold rounded-md transition duration-200 flex items-center justify-center"
           >
-            Signup
+             {loading ? (
+              <div
+                className="w-6 h-6 border-4 border-t-4 border-gray-200 rounded-full animate-spin"
+                style={{ borderTopColor: "green" }}
+              ></div>
+            ) : (
+              "Signup"
+            )}
           </button>
         </div>
 
@@ -244,3 +258,4 @@ const Signup = () => {
 };
 
 export default Signup;
+
