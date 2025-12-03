@@ -4,31 +4,9 @@
 
 **A Comprehensive Waste Management & Recycling Ecosystem**
 
-[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react&logoColor=white)](https://reactjs.org/)
-[![Firebase](https://img.shields.io/badge/Firebase-10.13.0-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.10-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
 *Connecting communities for sustainable waste management and eco-friendly living*
 
-[Live Demo](#) • [Features](#-features) • [Installation](#-installation) • [Documentation](#-project-structure)
-
 </div>
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Key Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
-- [Core Modules](#-core-modules)
-- [User Roles](#-user-roles)
-- [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
 
 ---
 
