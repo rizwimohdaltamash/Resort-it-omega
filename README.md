@@ -441,10 +441,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Mohd. Altamash Rizwi**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
-
 ---
 
 ## 🙏 Acknowledgments
@@ -454,12 +450,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Tailwind CSS for styling utilities
 - Leaflet for mapping functionality
 - All contributors and users of Resort-It
-
----
-
-## 📞 Support
-
-For support, email your.email@example.com or join our community forum.
 
 ---
 
@@ -485,10 +475,5 @@ For support, email your.email@example.com or join our community forum.
 
 <div align="center">
 
-### ⭐ Star this repo if you find it helpful!
-
-**Made with 💚 for a sustainable future**
-
-[⬆ Back to Top](#-resort-it)
 
 </div>
